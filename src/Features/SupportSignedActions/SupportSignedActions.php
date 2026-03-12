@@ -18,7 +18,7 @@ class SupportSignedActions extends ComponentHook
 
     public static ?int $ttl = null;
 
-    public function call($method, $params, $returnEarly, $metadata, $componentContext)
+    public function call($method, $params, $returnEarly, $metadata = null, $componentContext = null)
     {
         if (self::$enabled === false) {
             return;
